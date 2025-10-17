@@ -1,18 +1,23 @@
-import React from 'react';
-import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
-import Services from './Components/Services';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Team from "./Pages/Team";
+import Contact from "./pages/Contact";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
-export default function App() {
+function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-      <Services />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
+
+export default App;

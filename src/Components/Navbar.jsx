@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark py-3 px-5 bg-dark">
-      <Link className="navbar-brand fw-bold text-primary" to="/">
-        MET.
+    <nav className="bg-white/2 m-6 rounded-full p-3 items-center flex justify-between border border-[#222222]">
+      <Link className="text-base ml-3 text-3xl font-bold" to="/">
+        <h1>MET.</h1>
       </Link>
 
-      <button
+      {/* <button
         className="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -18,30 +18,23 @@ function Navbar() {
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
-      </button>
+      </button> */}
 
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav mx-auto">
-          <li className="nav-item">
-            <Link to="/" className="nav-link text-light">
+      <div className="flex gap-8" id="navbarNav">
+            <Link to="/" className="text-white/50">
               Home
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/team" className="nav-link text-light">
+            <Link to="/team" className="text-white/50">
               Team
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-link text-light">
+            <Link to="/contact" className="text-white/50">
               Contact
             </Link>
-          </li>
-        </ul>
-        <Link to="/contact" className="btn btn-primary rounded-pill px-4">
+      </div>
+        <Link to="/contact" className="bg-base flex items-center justify-center py-3 relative overflow-hidden px-6 rounded-full text-black font-semibold hover:scale-105 transition duration-300">
+        <span className="w-20 h-12 absolute -top-9 bg-white blur-xl rounded-full"></span>
           Contact Us
         </Link>
-      </div>
     </nav>
   );
 }

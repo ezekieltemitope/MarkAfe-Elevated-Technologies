@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #0d0d0d; /* match your page color */
+  background-color: #070707; /* match your page color */
   height: 100%;
 }
 
@@ -119,4 +119,29 @@ a.text-primary:hover {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+
+@import "tailwindcss";
+
+@theme {
+  --color-base: #3F8FFF;
+  --color-dark: #070707;
+}
+
+@font-face {
+  font-family: Sora;
+  src: url("/Sora-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: DM Sans;
+  src: url("/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
+}
+
+body, p, span, a, li, div {
+  font-family: 'DM Sans', sans-serif;
 }

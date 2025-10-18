@@ -1,11 +1,11 @@
 function Team() {
   const team = [
-    { name: "Mark Afe", role: "Server Administrator & Cloud Specialist" },
-    { name: "Pleasant", role: "Graphics Designer" },
+    { name: "Mark Afe", role: "Cloud Infrastructure engineer / Server Administrator" },
+    { name: "Pleasant", role: "Company Secretary" },
     { name: "Temitope", role: "Frontend Developer" },
-    { name: "Judah", role: "UI/UX Designer" },
-    { name: "Tayo", role: "Backend & API Developer" },
-    { name: "Johnson John", role: "IT Specialist" },
+    { name: "Judah", role: "Product/ Visual Designer" },
+    { name: "Tayo", role: "Full Stack Developer" },
+    { name: "Johnson John", role: "Frontend Developer" },
   ]
 
   return (

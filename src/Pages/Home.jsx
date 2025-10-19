@@ -3,12 +3,12 @@ import React from "react";
 function Home() {
   return (
     <div
-      className="text-white bg-dark"
-      // style={{
-      //   backgroundColor: "#0d0d0d",
-      //   minHeight: "100vh",
-      //   overflow: "hidden",
-      // }}
+      className="text-light"
+      style={{
+        backgroundColor: "#0d0d0d",
+        minHeight: "100%",
+        overflow: "hidden",
+      }}
     >
       {/* ===== Hero Section ===== */}
       <section className="text-center py-5">
@@ -116,6 +116,7 @@ function Home() {
             <div class="col" style={{ width: "400px" }}>
               <div class="card bg-transparent text-light h-100 custom-shadow border-none">
                 <div class="card-body">
+                  <img src="" alt="" srcset="" />
                   <h5 className="fw-bold">Cloud Hosting Solutions</h5>
                   <p className="text-secondary small pt-2">
                     Delivering secure, scalable, and high-performance hosting

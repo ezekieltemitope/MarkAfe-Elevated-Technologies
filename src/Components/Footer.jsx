@@ -1,33 +1,46 @@
-import React from "react";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './Footer.css';
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer
-      className="py-4 border-top border-primary-subtle text-center text-light"
-      style={{ backgroundColor: "#0d0d0d" }}
-    >
-      <div className="container">
-        <p className="text-light mb-1">
-          Empowering businesses with reliable cloud, infrastructure, and IT
-          transformation solutions.
-        </p>
-        <div className="my-3">
-          <a href="#" className="text-light mx-2">
-            <i className="bi bi-linkedin"></i>
-          </a>
-          <a href="#" className="text-light mx-2">
-            <i className="bi bi-instagram"></i>
-          </a>
-          <a href="#" className="text-light mx-2">
-            <i className="bi bi-facebook"></i>
-          </a>
+    <footer className="footer-section bg-black text-white py-5 position-relative">
+      <div className="container d-flex flex-column flex-md-row justify-content-between align-items-start">
+        {/* Mission Statement */}
+        <div className="footer-left mb-4 mb-md-0">
+          <p className="footer-text">
+            Empowering businesses with reliable cloud, infrastructure, and IT transformation solutions.
+            Building smarter foundations for the future
+          </p>
         </div>
-        <small className="text-secondary">
-          © 2025 MarkAfe Elevated Technologies. All rights reserved.
-        </small>
+
+        {/* Social Links */}
+        <div className="footer-right">
+          <h5 className="mb-3">Reach us here:</h5>
+          <div className="d-flex gap-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <i className="bi bi-linkedin fs-3"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <i className="bi bi-instagram fs-3"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <i className="bi bi-facebook fs-3"></i>
+            </a>
+          </div>
+        </div>
       </div>
+
+      {/* Copyright */}
+      <div className="footer-bottom text-end pe-3 pt-4">
+        <p className="small mb-0">© 2025 MarkAfe Elevated Technologies. All rights reserved.</p>
+      </div>
+
+      {/* Watermark */}
+      <div className="footer-watermark">MET</div>
     </footer>
   );
-}
+};
 
 export default Footer;

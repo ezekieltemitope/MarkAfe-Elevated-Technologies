@@ -68,6 +68,12 @@ html, body {
   position: absolute;
 }
 
+::placeholder {
+  color: #ccc !important;  /* Light gray or white for dark background */
+  opacity: 1;              /* Ensure it’s fully visible */
+}
+
+
 .custom-shadow {
   box-shadow: 0 0.3rem 0.5rem rgba(255, 255, 255, 0.5); /* White shadow */
 }

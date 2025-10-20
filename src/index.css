@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Prevent extra space at top/bottom */
 html, body {
   margin: 0;

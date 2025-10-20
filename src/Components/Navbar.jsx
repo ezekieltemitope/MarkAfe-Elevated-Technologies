@@ -1,40 +1,55 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="bg-white/2 m-6 rounded-full p-3 items-center flex justify-between border border-[#222222]">
-      <Link className="text-base ml-3 text-3xl font-bold" to="/">
+    <nav className="bg-white/5 m-2 rounded-full py-1 px-2 flex items-center justify-between">
+      <Link className="text-base ml-2 text-xl font-bold no-underline" to="/">
         <h1>MET.</h1>
       </Link>
 
-      {/* <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button> */}
+      <div className="flex gap-4" id="navbarNav">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `no-underline transition duration-300 ${
+              isActive ? "text-white font-semibold" : "text-white/50 hover:text-white"
+            }`
+          }
+        >
+          Home
+        </NavLink>
 
-      <div className="flex gap-8" id="navbarNav">
-            <Link to="/" className="text-white/50">
-              Home
-            </Link>
-            <Link to="/team" className="text-white/50">
-              Team
-            </Link>
-            <Link to="/contact" className="text-white/50">
-              Contact
-            </Link>
+        <NavLink
+          to="/team"
+          className={({ isActive }) =>
+            `no-underline transition duration-300 ${
+              isActive ? "text-white font-semibold" : "text-white/50 hover:text-white"
+            }`
+          }
+        >
+          Team
+        </NavLink>
+
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `no-underline transition duration-300 ${
+              isActive ? "text-white font-semibold" : "text-white/50 hover:text-white"
+            }`
+          }
+        >
+          Contact
+        </NavLink>
       </div>
-        <Link to="/contact" className="bg-base flex items-center justify-center py-3 relative overflow-hidden px-6 rounded-full text-black font-semibold hover:scale-105 transition duration-300">
-        <span className="w-20 h-12 absolute -top-9 bg-white blur-xl rounded-full"></span>
-          Contact Us
-        </Link>
+
+      <Link
+        to="/contact"
+        className="bg-base flex items-center justify-center py-2 px-4 rounded-full text-sm text-black font-medium hover:scale-105 transition duration-300 no-underline relative overflow-hidden"
+      >
+        <span className="w-16 h-10 absolute -top-8 bg-white blur-xl rounded-full"></span>
+        Contact Us
+      </Link>
     </nav>
   );
 }

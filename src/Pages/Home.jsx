@@ -17,10 +17,10 @@ function Home() {
            <div className="flex z-20 mt-4 flex-col justify-center items-center">
              <h1 className="text-6xl text-center">
               Elevating{" "}
-              <span className="text-base font-semibold">Businesses</span>{" "}
+              <span className="text-base text-6xl font-semibold">Businesses</span>{" "}
               Through <br />
               Smarter{" "}
-              <span className="text-base font-semibold">IT Solutions</span>
+              <span className="text-base font-semibold text-6xl">IT Solutions</span>
             </h1>
             <p className="text-lg text-white/50 mt-4">
               From cloud hosting to IT transformation, we help organizations
@@ -50,7 +50,7 @@ function Home() {
 </div>
 
            </div>
-           <div className="absolute bg-dark top-28 z-10 w-full blur-xl h-40">
+           <div className="absolute bg-black top-28 z-10 w-full blur-xl h-40">
 
            </div>
            <img src="/grid.svg" className="w-[90%] opacity-50 bottom-68 h-auto absolute" alt="" />
@@ -62,18 +62,20 @@ function Home() {
       <section className="text-center pb-5  text-white">
         <div className="container">
           {/* Label */}
-          <div className="d-flex justify-content-center mb-4">
-            <button class="button" disabled>
-              <div class="blob1"></div>
-              <div class="blob2"></div>
-              <div class="inner">Who We Are</div>
-            </button>
-          </div>
+          <button
+    href="#services"
+    className="bg-white/5 flex backdrop-blur-sm items-center justify-center py-3 relative overflow-hidden px-6 rounded-full text-white border border-white/5 my-3 mx-auto font-semibold hover:scale-105 
+    shadow-[inset_0_2px_20px_rgba(255,255,255,0.01),inset_0_-2px_20px_rgba(255,255,255,0.01)] 
+    transition duration-300 no-underline"
+  >
+    <span className="w-20 h-11 absolute -bottom-12 bg-white/50 blur-xl rounded-full"></span>
+    Who We Are
+  </button>
 
           {/* Main Text */}
           <p className="lead mx-auto" style={{ maxWidth: "750px" }}>
             At{" "}
-            <span className="fw-semibold text-primary">
+            <span className="font-semibold text-primary">
               MarkAfe Elevated Technologies
             </span>
             , we specialize in helping businesses unlock their full potential

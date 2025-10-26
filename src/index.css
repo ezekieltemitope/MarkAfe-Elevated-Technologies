@@ -1,5 +1,3 @@
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 /* Prevent extra space at top/bottom */
@@ -70,7 +68,7 @@ html, body {
     transparent
   );
   position: absolute;
-}
+};
 
 ::placeholder {
   color: #ccc !important;  /* Light gray or white for dark background */
@@ -148,7 +146,7 @@ html {
   src: url("/DMSans-VariableFont_opsz\,wght.ttf");
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .sora {
   font-family: 'Sora', sans-serif;
 }
 

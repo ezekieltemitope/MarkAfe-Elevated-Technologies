@@ -5,40 +5,43 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-section bg-[#0D0D0D] text-white pt-5 position-relative">
-      <div className="container d-flex flex-column flex-md-row justify-content-between align-items-start">
+    <footer className="footer-section bg-[#0D0D0D] text-white pt-8 pb-4 relative">
+      {/* Top Section */}
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-8">
         {/* Mission Statement */}
-        <div className="footer-left mb-4 mb-md-0">
-          <p className="footer-text">
-            Empowering businesses with reliable cloud, infrastructure, and IT transformation solutions.
+        <div className="md:w-1/2">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-white">
+            Empowering businesses with reliable cloud, infrastructure, and IT transformation solutions. 
             Building smarter foundations for the future
           </p>
         </div>
 
         {/* Social Links */}
-        <div className="footer-right">
-          <h5 className="mb-3">Reach us here:</h5>
-          <div className="d-flex gap-5">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white">
-              <i className="bi bi-linkedin fs-3"></i>
+        <div className="md:w-1/2 flex flex-col items-start md:items-end text-start md:text-end">
+          <h5 className="mb-3 text-lg font-semibold">Reach us here:</h5>
+          <div className="flex gap-6 justify-start md:justify-end">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition">
+              <i className="bi bi-linkedin text-2xl"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
-              <i className="bi bi-instagram fs-3"></i>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition">
+              <i className="bi bi-instagram text-2xl"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
-              <i className="bi bi-facebook fs-3"></i>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-600 transition">
+              <i className="bi bi-facebook text-2xl"></i>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="footer-bottom text-end pe-3 mb-0 pt-5 pt-4">
-        <p className="small mb-0">© 2025 MarkAfe Elevated Technologies. All rights reserved.</p>
+      {/* Bottom Section */}
+      <div className="footer-bottom text-center md:text-end px-4 mt-8">
+        <p className="text-xs sm:text-sm mb-0">© 2025 MarkAfe Elevated Technologies. All rights reserved.</p>
       </div>
 
       {/* Watermark */}
-      <div className="footer-watermark">MET</div>
+      <div className="footer-watermark absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white/10 text-4xl sm:text-6xl font-bold">
+        MET
+      </div>
     </footer>
   );
 };

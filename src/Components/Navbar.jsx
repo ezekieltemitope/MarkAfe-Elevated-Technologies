@@ -1,19 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-white/5 m-2 rounded-full p-3 flex items-center justify-between">
-      <Link className="text-base text-3xl sora ml-2 no-underline font-semibold" href="/">
+      {/* Logo */}
+      <Link
+        to="/"
+        className="text-2xl sm:text-3xl sora ml-2 no-underline font-semibold text-blue-500"
+        > 
         MET.
       </Link>
 
-      <div className="flex gap-4" id="navbarNav">
+      {/* Mobile Menu Button */}
+      <button
+        className="sm:hidden text-white focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? "✖" : "☰"}
+      </button>
+
+      {/* Nav Links */}
+      <div
+        id="navbarNav"
+        className={`${
+        isOpen ? "flex" : "hidden"
+        } flex-col sm:flex sm:flex-row gap-4 sm:gap-6 absolute sm:static top-16 left-0 w-full sm:w-auto bg-transparent p-4 sm:p-0 rounded-lg sm:rounded-none`}
+      >
         <NavLink
           to="/"
           className={({ isActive }) =>
             `no-underline transition duration-300 ${
-              isActive ? "text-white font-semibold" : "text-white/50 hover:text-white"
+              isActive
+                ? "text-white font-semibold"
+                : "text-white/50 hover:text-white"
             }`
           }
         >
@@ -24,7 +46,9 @@ function Navbar() {
           to="/team"
           className={({ isActive }) =>
             `no-underline transition duration-300 ${
-              isActive ? "text-white font-semibold" : "text-white/50 hover:text-white"
+              isActive
+                ? "text-white font-semibold"
+                : "text-white/50 hover:text-white"
             }`
           }
         >
@@ -35,7 +59,9 @@ function Navbar() {
           to="/contact"
           className={({ isActive }) =>
             `no-underline transition duration-300 ${
-              isActive ? "text-white font-semibold" : "text-white/50 hover:text-white"
+              isActive
+                ? "text-white font-semibold"
+                : "text-white/50 hover:text-white"
             }`
           }
         >
@@ -43,9 +69,10 @@ function Navbar() {
         </NavLink>
       </div>
 
+      {/* Contact Us Button */}
       <Link
         to="/contact"
-        className="bg-base flex items-center justify-center py-[12px] px-4 rounded-full text-sm text-black font-medium hover:scale-105 transition duration-300 no-underline relative overflow-hidden"
+        className="hidden sm:flex bg-base items-center justify-center py-[10px] px-4 rounded-full text-sm text-black font-medium hover:scale-105 transition duration-300 no-underline relative overflow-hidden"
       >
         <span className="w-16 h-10 absolute -top-8 bg-white blur-xl rounded-full"></span>
         Contact Us
